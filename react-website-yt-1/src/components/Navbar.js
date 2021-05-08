@@ -16,7 +16,7 @@ const closeMobileMenu = () => setClick(false);
            <div className ='menu-icon' onClick={handleClick}>
                <i class={click ? 'fas fa-times':'fas fa-bars'}/>
            </div>
-            <ul className= {click?'nav-menu active': 'nave-menu'}/>
+            <ul className= {click?'nav-menu active': 'nave-menu'}>
                 <li className='nav-item'>
                     <Link to ='/' className='nav-links' onClick={closeMobileMenu}/>
                     Home
@@ -33,6 +33,8 @@ const closeMobileMenu = () => setClick(false);
                     <Link to ='/sign-up' className='nav-links' onClick={closeMobileMenu}/>
                    Sign Up
                 </li>
+            </ul>
+            {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
     </nav>
        </>
